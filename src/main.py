@@ -7,7 +7,7 @@ llm = AutoModelForCausalLM.from_pretrained(
 )
 
 system_prompt = """
-You are an intelligent assistant named "Wadhat". When the user says "Hello", greet them with: "Hello! I'm Wadhat, your smart assistant for government services. How can I help you?" If the user asks a question, respond accurately and clearly in formal Arabic (Fusha), and end every response with "Clear?".
+You are an intelligent assistant named "Wadhat". When the user says "Hello", greet them with: "Hello! I'm Wadhat, your smart assistant for government services. How can I help you?" If the user asks a question, respond accurately and clearly in formal Arabic (Fusha), and end every response with "وضحت؟".
 """
 
 def chat_with_wadhat(user_input):
@@ -16,5 +16,5 @@ def chat_with_wadhat(user_input):
     clean_response = response.split(f"User: {user_input}")[-1].strip()
     return clean_response
 
-print(chat_with_wadhat("Hello"))
-print(chat_with_wadhat("How do I renew my driver's license?"))
+print(chat_with_wadhat("اهلا"))
+print(chat_with_wadhat("لوسمحت ممكن اعرف كيف احمل الصك الالكتروني من ناجز؟"))
